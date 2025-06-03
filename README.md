@@ -1,12 +1,11 @@
 # MoveIt Tutorial for Real Robot Integration
 
-🚀 A complete step-by-step guide to using MoveIt 2 with simulation and real robot arms, built for rapid prototyping on the General Bionix platform.
+🚀 A detailed guide to set up, execute, and program in moveit 
 
----
 
 ## 📚 Overview
 
-Overview of this tutorial
+Summary of this tutorial
 - Setting up a robot arm in ROS2 and MoveIt
 - Planning and executing motion in RViz
 - Integrating simulation with Gazebo
@@ -15,13 +14,11 @@ Overview of this tutorial
   1. pick-and-place
   2. 
 
----
 
 ## 🛠 Software Needed
 
 - ROS2 (Humble)
 - MoveIt 
----
 
 ## 🧰 Installation & Setup
 
