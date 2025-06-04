@@ -66,7 +66,7 @@ git clone https://github.com/ros2/examples src/examples -b humble
 source install/setup.bash
 ```
 
-🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
+🛑 🛑  Only move on if your Colcon workspace builds without any errors. If any packages fail to build, troubleshoot with this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
 
 ## Installation: Lets MOVEIT 
 ### 1. Download the source code & install dependencies
@@ -84,13 +84,13 @@ colcon build --symlink-install
 ```bash
 source ~/ws_moveit/install/setup.bash
 ```
-### 4. Launch RViz (quick motion planning demo) or Gazebo (full sim test) for MoveIt:
-RViz: 
+### 4. Try MoveIt in action 
+Launch RViz (for quick motion planning demo):  
 ```bash
 ros2 launch moveit2_tutorials demo.launch.py
 ```
-Gazebo: 
+or Gazebo (for full sim test):
 ```bash
 ros2 launch moveit2_tutorials gazebo.launch.py
 ```
-### Congrats on setting things up! Now we will move onto how to use moveit like a prooo.
+### Awesome work getting everything installed! Next we’ll dive into how to actually use MoveIt to control your robot like a pro.
