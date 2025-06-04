@@ -23,11 +23,11 @@ Summary of this tutorial
 ## 🧰 Installation: Pre-reqs
 
 ### 1. Prepare the VM (Skip if Linux User)
-- [] Rent a GPU on vast.ai: pick a Linux vm that is within your budget.
-- [] Connect using SSH from your computer: copy your public key, which you can get in your terminal, into your VM's ~/.ssh/authorized_keys in the VM's konsole. 
+- [ ] Rent a GPU on vast.ai: pick a Linux vm that is within your budget.
+- [ ] Connect using SSH from your computer: copy your public key, which you can get in your terminal, into your VM's ~/.ssh/authorized_keys in the VM's konsole. 
 
 ### 2. Install ROS2 Humble OR Rolling
-Install ROS 2 Humble on Ubuntu 22.04, or Rolling on Ubuntu 24.04, depending on your ROS development goals.
+<u> [Install ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u> on Ubuntu 22.04, or Rolling on Ubuntu 24.04, depending on your ROS development goals.
 
 | Platform       | Ubuntu Version | ROS 2 Version to Use     | Advantage                          |
 |----------------|----------------|---------------------------|--------------------------------|
@@ -36,7 +36,7 @@ Install ROS 2 Humble on Ubuntu 22.04, or Rolling on Ubuntu 24.04, depending on y
 | Linux    | 24.04           | 🟡 Rolling   | Only option right now for 24.04, ideal for testing new ROS features; currently experimental, stablility not guaranteed |
 
 
-<u> [ROS2 Humble installation guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u>
+
 
 
 ```bash
