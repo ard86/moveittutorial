@@ -1,6 +1,6 @@
 # MoveIt Tutorial for Real Robot Integration
 
-🚀 A detailed guide to set up, execute, and program in moveit 
+🚀 Annie's detailed guide to set up, execute, and program in Moveit 
 
 
 ## Overview
