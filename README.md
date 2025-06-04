@@ -20,7 +20,9 @@ Summary of this tutorial
 - ROS2 (Humble)
 - MoveIt 
 
-## 🧰 Installation & Setup
+## 🧰 Installation: Pre-reqs
+
+### Prepare the VM
 
 ```bash
 sudo apt install ros-humble-moveit
