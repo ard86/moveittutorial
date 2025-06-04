@@ -3,7 +3,7 @@
 🚀 A detailed guide to set up, execute, and program in moveit 
 
 
-## 📚 Overview
+## Overview
 
 Summary of this tutorial
 - Setting up a robot arm in ROS2 and MoveIt
@@ -15,12 +15,12 @@ Summary of this tutorial
   2. 
 
 
-## 🛠 Software Needed
+## Software Needed
 
 - ROS2 (Humble)
 - MoveIt 
 
-## 🧰 Installation: Pre-reqs
+## Installation: Pre-reqs
 
 ### 1. Prepare the VM (Skip if Linux User)
 - [ ] Rent a GPU on vast.ai: pick a Linux vm that is within your budget.
