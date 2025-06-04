@@ -27,13 +27,13 @@ Summary of this tutorial
 - [] Connect using SSH from your computer: copy your public key, which you can get in your terminal, into your VM's ~/.ssh/authorized_keys in the VM's konsole. 
 
 ### 2. Install ROS2 Humble OR Rolling
-Depending on your needs, pick either ROS2 Humble or Rolling. 
+Install ROS 2 Humble on Ubuntu 22.04, or Rolling on Ubuntu 24.04, depending on your ROS development goals.
 
-| Platform       | Ubuntu Version | ROS 2 Version to Use     | Notes                          |
+| Platform       | Ubuntu Version | ROS 2 Version to Use     | Advantage                          |
 |----------------|----------------|---------------------------|--------------------------------|
-| macOS (via VM) | 22.04           | 🟢 Humble   | Most stable and supported      |
-| Linux native   | 22.04           | 🟢 Humble    | Ideal setup                    |
-| Linux native   | 24.04           | 🟡 Rolling   | Only option right now for 24.04 |
+| MacOS (via VM) | 22.04           | 🟢 Humble   | Ideal for stable, long-term robotics setup     |
+| Linux    | 22.04           | 🟢 Humble    |                     |
+| Linux    | 24.04           | 🟡 Rolling   | Only option right now for 24.04, ideal for testing new ROS features; currently experimental, stablility not guaranteed |
 
 
 <u> [ROS2 Humble installation guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u>
