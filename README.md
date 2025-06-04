@@ -86,7 +86,7 @@ colcon build --symlink-install
 ```bash
 source ~/ws_moveit/install/setup.bash
 ```
-#### Launch RViz (quick motion planning demo) or Gazebo (full sim test):
+#### Launch RViz (quick motion planning demo) or Gazebo (full sim test) for MoveIt:
 RViz: 
 ```bash
 ros2 launch moveit2_tutorials demo.launch.py
