@@ -69,7 +69,7 @@ colcon build --symlink-install
 source install/setup.bash
 ```
 
-🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this debugging tutorial.
+🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
 
 
 
