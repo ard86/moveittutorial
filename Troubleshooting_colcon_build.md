@@ -30,6 +30,7 @@ nano ~/.bashrc
 remove the following line involving rolling if it exists
 ```bash
 source /opt/ros/rolling/setup.bash
+```
 
 then reload:
 ```bash
