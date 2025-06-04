@@ -22,7 +22,22 @@ Summary of this tutorial
 
 ## 🧰 Installation: Pre-reqs
 
-### Prepare the VM
+### 1. Prepare the VM (Skip if Linux User)
+- [] Rent a GPU on vast.ai: pick a Linux vm that is within your budget.
+- [] Connect using SSH from your computer: copy your public key, which you can get in your terminal, into your VM's ~/.ssh/authorized_keys in the VM's konsole. 
+
+### 2. Install ROS2 Humble OR Rolling
+Depending on your needs, pick either ROS2 Humble or Rolling. 
+
+| Platform       | Ubuntu Version | ROS 2 Version to Use     | Notes                          |
+|----------------|----------------|---------------------------|--------------------------------|
+| macOS (via VM) | 22.04           | 🟢 Humble   | Most stable and supported      |
+| Linux native   | 22.04           | 🟢 Humble    | Ideal setup                    |
+| Linux native   | 24.04           | 🟡 Rolling   | Only option right now for 24.04 |
+
+
+<u> [ROS2 Humble installation guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u>
+
 
 ```bash
 sudo apt install ros-humble-moveit
