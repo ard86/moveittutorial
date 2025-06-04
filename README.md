@@ -43,6 +43,7 @@ sudo rosdep init
 rosdep update
 sudo apt update
 sudo apt dist-upgrade
+```
 
 ### 3. Install and set up Colcon, the official build tool to customize and extend Moveit for your robot in ROS2.
 
