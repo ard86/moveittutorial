@@ -27,7 +27,7 @@ Summary of this tutorial
 - [ ] Connect using SSH from your computer: copy your public key, which you can get in your terminal, into your VM's ~/.ssh/authorized_keys in the VM's konsole. 
 
 ### 2. Install ROS2 Humble OR Rolling
-<u> [Install ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u> on Ubuntu 22.04, or Rolling on Ubuntu 24.04, depending on your ROS development goals.
+<u> [Install ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)</u> on Ubuntu 22.04, or <u>[Rolling](https://docs.ros.org/en/rolling/Installation/Ubuntu-Install-Debs.html)<u> on Ubuntu 24.04, depending on your ROS development goals.
 
 | Platform       | Ubuntu Version | ROS 2 Version to Use     | Advantage                          |
 |----------------|----------------|---------------------------|--------------------------------|
