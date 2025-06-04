@@ -35,13 +35,4 @@ Summary of this tutorial
 | Linux    | 22.04           | 🟢 Humble    |                     |
 | Linux    | 24.04           | 🟡 Rolling   | Only option right now for 24.04, ideal for testing new ROS features; currently experimental, stablility not guaranteed |
 
-
-
-
-
-```bash
-sudo apt install ros-humble-moveit
-git clone https://github.com/yourusername/moveit-tutorial-gbx.git
-cd moveit-tutorial-gbx
-colcon build
-source install/setup.bash
+### 3. Install Moveit!
