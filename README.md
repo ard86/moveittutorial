@@ -18,6 +18,7 @@ Summary of this tutorial
 ## Software Needed
 
 - ROS2 (Humble)
+- Colon
 - MoveIt 
 
 ## Installation: Pre-reqs
@@ -35,4 +36,56 @@ Summary of this tutorial
 | Linux    | 22.04           | 🟢 Humble    |                     |
 | Linux    | 24.04           | 🟡 Rolling   | Only option right now for 24.04, ideal for testing new ROS features; currently experimental, stablility not guaranteed |
 
-### 3. Install Moveit!
+install system dependencies & update packages:
+```bash
+sudo apt install python3-rosdep
+sudo rosdep init
+rosdep update
+sudo apt update
+sudo apt dist-upgrade
+
+### 3. Install and set up Colcon, the official build tool to customize and extend Moveit for your robot in ROS2.
+
+1. Install: 
+```bash
+sudo apt install python3-colcon-common-extensions
+sudo apt install python3-colcon-mixin
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update default
+sudo apt install python3-vcstool
+
+2. Create a colcon workspace:
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+
+3. Download tutorials to prepare you for custom code, Build workspace
+```bash
+git clone https://github.com/ros2/examples src/examples -b humble
+colcon build --symlink-install
+source install/setup.bash
+
+🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, debug with the following:
+
+❗️Inconsistent sourcing caused by Multiple ROS 2s Installed (Humble + Rolling)
+
+If you have **both ROS 2 Humble and Rolling installed** on your system, you may encounter colcon build errors such as:
+
+- `Package not found`
+- `setup.bash not found`
+- `3 packages failed`
+- Runtime crashes or undefined symbols
+
+✅ Solution: Remove ROS 2 Rolling and Clean Environment
+
+#### Step 1: Remove ROS Rolling
+
+```bash
+sudo apt remove ~nros-rolling* -y
+sudo apt autoremove -y
+sudo rm -rf /opt/ros/rolling
+
+
+
+
+
