@@ -46,26 +46,29 @@ sudo apt dist-upgrade
 
 ### 3. Install and set up Colcon, the official build tool to customize and extend Moveit for your robot in ROS2.
 
-1. Install: 
+#### 1. Install: 
 ```bash
 sudo apt install python3-colcon-common-extensions
 sudo apt install python3-colcon-mixin
 colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 colcon mixin update default
 sudo apt install python3-vcstool
+```
 
-2. Create a colcon workspace:
+#### 2. Create a colcon workspace:
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
+```
 
-3. Download tutorials to prepare you for custom code, Build workspace
+#### 3. Download tutorials to prepare you for custom code, Build workspace
 ```bash
 git clone https://github.com/ros2/examples src/examples -b humble
 colcon build --symlink-install
 source install/setup.bash
+```
 
-🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, debug with the following:
+🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this debugging tutorial.
 
 
 
