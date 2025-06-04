@@ -67,25 +67,6 @@ source install/setup.bash
 
 🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, debug with the following:
 
-❗️Inconsistent sourcing caused by Multiple ROS 2s Installed (Humble + Rolling)
-
-If you have **both ROS 2 Humble and Rolling installed** on your system, you may encounter colcon build errors such as:
-
-- `Package not found`
-- `setup.bash not found`
-- `3 packages failed`
-- Runtime crashes or undefined symbols
-
-✅ Solution: Remove ROS 2 Rolling and Clean Environment
-
-#### Step 1: Remove ROS Rolling
-
-```bash
-sudo apt remove ~nros-rolling* -y
-sudo apt autoremove -y
-sudo rm -rf /opt/ros/rolling
-
-
 
 
 
