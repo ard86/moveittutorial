@@ -62,7 +62,7 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 ```
 
-#### 3. Download tutorials to prepare you for custom code, Build workspace
+#### 3. Download tutorials to prepare for custom coding in Moveit & Build workspace
 ```bash
 git clone https://github.com/ros2/examples src/examples -b humble
 colcon build --symlink-install
