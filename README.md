@@ -58,19 +58,41 @@ sudo apt install python3-vcstool
 
 #### 2. Create a colcon workspace:
 ```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws
+mkdir -p ~/ws_moveit/src
+cd ~/ws_moveit/src
 ```
 
 #### 3. Download tutorials to prepare for custom coding in Moveit & Build workspace
 ```bash
 git clone https://github.com/ros2/examples src/examples -b humble
-colcon build --symlink-install
 source install/setup.bash
 ```
 
 🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
 
-
-
-
+### 4. Install Moveit!
+#### Download the source code & install dependencies
+```bash
+sudo apt remove ros-$ROS_DISTRO-moveit*
+vcs import --recursive < moveit2_tutorials/moveit2_tutorials.repos
+sudo apt update && rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
+```
+#### Configure colcon workspace
+```bash
+cd ~/ws_moveit
+colcon build --symlink-install
+```
+#### Source colcon workspace
+```bash
+source ~/ws_moveit/install/setup.bash
+```
+#### Launch RViz (quick motion planning demo) or Gazebo (full sim test):
+RViz: 
+```bash
+ros2 launch moveit2_tutorials demo.launch.py
+```
+Gazebo: 
+```bash
+ros2 launch moveit2_tutorials gazebo.launch.py
+```
+### Congrats on setting things up! Now we will move onto how to use moveit like a prooo.
