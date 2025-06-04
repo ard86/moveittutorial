@@ -19,21 +19,27 @@ This is typically caused by **inconsistent ROS sourcing**.
 sudo apt remove ~nros-rolling* -y
 sudo apt autoremove -y
 sudo rm -rf /opt/ros/rolling
+```
 
 ### Step 2: Fix Your .bashrc
-
+check bash: 
 ```bash
 nano ~/.bashrc
+```
 
-remove this line, if it exists, then reload:
+remove the following line involving rolling if it exists
 ```bash
 source /opt/ros/rolling/setup.bash
+
+then reload:
+```bash
 source ~/.bashrc
+```
 
 ### Step 3: Confirm you are only using Humble
 ```bash
 echo $ROS_DISTRO
-
+```
 it should only return humble. 
 
 ### Step 4: Rebuild colcon workspace
@@ -41,3 +47,6 @@ it should only return humble.
 cd ~/ros2_ws
 rm -rf build/ install/ log/
 colcon build --symlink-install
+```
+
+## ✅ Debugging done! Continue with the moveit tutorial
