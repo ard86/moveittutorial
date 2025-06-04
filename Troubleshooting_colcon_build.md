@@ -5,7 +5,7 @@ If you have **both ROS 2 Humble and Rolling installed** on your system, you may 
 - `Package not found`
 - `setup.bash not found`
 - `3 packages failed`
-- Runtime errors, crashes, or message type mismatches
+- Failures, Runtime errors, crashes
 
 This is typically caused by **inconsistent ROS sourcing**.
 
