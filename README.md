@@ -71,22 +71,22 @@ source install/setup.bash
 🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
 
 ## Installation: Lets MOVEIT 
-#### Download the source code & install dependencies
+### 1. Download the source code & install dependencies
 ```bash
 sudo apt remove ros-$ROS_DISTRO-moveit*
 vcs import --recursive < moveit2_tutorials/moveit2_tutorials.repos
 sudo apt update && rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 ```
-#### Configure colcon workspace
+### 2. Configure colcon workspace
 ```bash
 cd ~/ws_moveit
 colcon build --symlink-install
 ```
-#### Source colcon workspace
+### 3. Source colcon workspace
 ```bash
 source ~/ws_moveit/install/setup.bash
 ```
-#### Launch RViz (quick motion planning demo) or Gazebo (full sim test) for MoveIt:
+### 4. Launch RViz (quick motion planning demo) or Gazebo (full sim test) for MoveIt:
 RViz: 
 ```bash
 ros2 launch moveit2_tutorials demo.launch.py
