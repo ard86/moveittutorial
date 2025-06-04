@@ -70,7 +70,7 @@ source install/setup.bash
 
 🛑 You should only proceed to the next step when you get a pop up saying all colcon packages have been successfully installed. If there is even one that failed to build, follow this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
 
-### 4. Install Moveit!
+## Installation: Lets MOVEIT 
 #### Download the source code & install dependencies
 ```bash
 sudo apt remove ros-$ROS_DISTRO-moveit*
