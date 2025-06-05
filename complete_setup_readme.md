@@ -1,6 +1,6 @@
-# Panda Arm Bolt Pick-and-Place System
+# Bolt Pick-and-Place
 
-A ROS2-based system for detecting and picking up bolts using a Franka Panda robot arm with YOLO object detection and MoveIt2 motion planning.
+A ROS2-based system for detecting and picking up bolts in MoveIt2 with YOLO object detection 
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
