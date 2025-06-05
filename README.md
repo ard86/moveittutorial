@@ -63,7 +63,6 @@ cd ~/ws_moveit/src
 #### 3. Download tutorials to prepare for custom coding in Moveit & Build workspace
 ```bash
 git clone https://github.com/ros2/examples src/examples -b humble
-source install/setup.bash
 ```
 
 🛑 🛑  Only move on if your Colcon workspace builds without any errors. If any packages fail to build, troubleshoot with this 👉 [Colcon Build Troubleshooting Guide](./Troubleshooting_colcon_build.md).
@@ -79,6 +78,7 @@ sudo apt update && rosdep install -r --from-paths . --ignore-src --rosdistro $RO
 ```bash
 cd ~/ws_moveit
 colcon build --symlink-install
+source install/setup.bash
 ```
 ### 3. Source colcon workspace
 ```bash
