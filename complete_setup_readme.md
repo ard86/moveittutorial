@@ -10,11 +10,11 @@ A ROS2-based system for detecting and picking up bolts using a Franka Panda robo
 - [Running the System](#running-the-system)
 - [Customizing Drop-off Location](#customizing-drop-off-location)
 - [Troubleshooting](#troubleshooting)
-- [Advanced Usage](#advanced-usage)
+- [Advanced Usage: dropping off in constraint spaces](#advanced-usage)
 
-## Prerequisites
+## Prereqs
 
-- Ubuntu 22.04 LTS
+- Ubuntu 22.04
 - ROS2 Humble
 - Python 3.10+
 - X11 forwarding enabled (if using SSH)
@@ -259,7 +259,7 @@ source install/setup.bash
 
 ## Running the System
 
-### Basic Launch
+### Test Launch
 
 Create a test launch file:
 
@@ -313,11 +313,11 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch panda_moveit_config test_system.launch.py
 
-# Terminal 2: Monitor (optional)
+# Terminal 2: 
 ros2 topic echo /target_point
 ```
 
-## Customizing Drop-off Location
+## Customizing Drop-off Location: 
 
 The current system drops bolts at a fixed location (0.3, -0.3). Here are several ways to customize this:
 
@@ -335,8 +335,6 @@ self.move_to(0.4, -0.2, self.carrying_height, 1.0, self.init_angle + data.data[2
 ```
 
 ### Method 2: Add ROS Parameters
-
-Create an enhanced version with configurable drop location:
 
 ```python
 #!/usr/bin/env python3
@@ -414,7 +412,7 @@ ros2 run panda_moveit_config configurable_arm_control.py --ros-args -p drop_x:=0
 
 ### Method 3: Interactive Drop Location Selection
 
-Add a service to set drop location dynamically:
+Set drop location dynamically:
 
 ```python
 # Add to controller class:
@@ -506,14 +504,7 @@ rm -rf build/ install/ log/
 colcon build --symlink-install
 ```
 
-## Advanced Usage
-
-### Adding Vase Insertion
-To extend the system for placing bolts into vases:
-
-1. Train a second YOLO model for vase detection
-2. Use the enhanced `bolt_vase_controller.py` and `bolt_vase_selector.py`
-3. Configure force feedback for compliant insertion
+## Advanced Usage: droppping the bolt off in a vase
 
 ### Real Robot Usage
 For use with actual Franka Panda hardware:
@@ -527,33 +518,3 @@ For use with actual Franka Panda hardware:
 Modify gripper behavior by adjusting:
 - Opening width: `joint_values = {"panda_finger_joint1": 0.03}`
 - Gripping force: Add force control to gripper action
-
-## Quick Command Reference
-
-```bash
-# Build
-cd ~/ros2_ws && colcon build --symlink-install
-
-# Source
-source /opt/ros/humble/setup.bash && source install/setup.bash
-
-# Launch
-ros2 launch panda_moveit_config test_system.launch.py
-
-# Monitor
-ros2 topic echo /target_point
-ros2 topic list
-ros2 node list
-```
-
-## Contributing
-
-Feel free to extend this system with:
-- Multiple object detection
-- Advanced grasp planning
-- Vision-based drop location selection
-- Force-controlled placement
-
-## License
-
-This project is provided as-is for educational and research purposes.
