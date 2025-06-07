@@ -18,19 +18,15 @@ Making a robot arm insert a phone charger into an outlet.
   - Real-time camera feed from Gazebo
   - Bounding boxes for detected objects
   - Mouse interaction for object selection
-- [x] Oriented bounding box (OBB) support for rotation detection
 
 ### Communication System
 - [x] ROS2 topics properly configured:
-  - `/image_raw` - Camera feed
-  - `/Yolov8_Inference` - Detection results
-  - `/target_point` - Selected object coordinates
+  - Camera detection for `/image_raw`
+  - able to correctly identify `/target_point` for selected object coordinates
 - [x] Successfully publishing 3D target coordinates with orientation
 
 ### Control System
-- [x] Basic pick-and-place logic implemented in `arm_control_from_UI.py`
-- [x] Gripper control functions defined
-- [x] Movement sequence: approach → grasp → lift → move → place → release
+- [x] Basic pick-and-place implemented in `arm_control_from_UI.py`
 
 ## 🚧 Current Issues
 
@@ -46,21 +42,15 @@ Making a robot arm insert a phone charger into an outlet.
 
 ## 📋 TODO List
 
-### Phase 1: Fix Core Functionality
+### 1. Fix Core Functionality
 - [ ] Resolve MoveIt Python bindings issue
-  - [ ] Option A: Build MoveIt2 from source with Python bindings
-  - [ ] Option B: Use alternative control method (direct joint commands)
-- [ ] Verify arm movement in response to UI clicks
 - [ ] Test complete pick-and-place cycle with existing objects
 
-### Phase 2: Adapt for Charger Task
+### 2. Adapt for Charger
 - [ ] **3D Models**
-  - [ ] Add phone charger STL to Gazebo
-  - [ ] Create outlet/USB port model
   - [ ] Define collision and inertial properties
 
 - [ ] **Computer Vision**
-  - [ ] Generate synthetic dataset using charger STL
   - [ ] Retrain YOLOv8 for:
     - Phone chargers (body + cable)
     - USB-C/Lightning connectors
@@ -69,10 +59,9 @@ Making a robot arm insert a phone charger into an outlet.
 
 - [ ] **Grasping Strategy**
   - [ ] Identify optimal grasp points on charger body
-  - [ ] Handle cable management during manipulation
-  - [ ] Account for asymmetric center of mass
+  - [ ] Account for weight distribution
 
-### Phase 3: Precision Insertion
+### 3. Precision Insertion
 - [ ] **Enhanced Perception**
   - [ ] Integrate depth information for 3D localization
   - [ ] Implement visual servoing for fine alignment
@@ -80,8 +69,6 @@ Making a robot arm insert a phone charger into an outlet.
 
 - [ ] **Motion Control**
   - [ ] Implement Cartesian path planning for insertion
-  - [ ] Add compliant control for safe contact
-  - [ ] Develop spiral search pattern for alignment
   - [ ] Add force feedback (simulated initially)
 
 - [ ] **Task Sequencing**
@@ -94,7 +81,7 @@ Making a robot arm insert a phone charger into an outlet.
     6. Verify connection
     7. Release and retract
 
-### Phase 4: Testing & Optimization
+### 4. Testing & Optimization
 - [ ] Create test scenarios:
   - [ ] Various charger positions/orientations
   - [ ] Multiple outlet heights/angles
@@ -103,78 +90,3 @@ Making a robot arm insert a phone charger into an outlet.
 - [ ] Implement error recovery behaviors
 - [ ] Optimize speed vs. reliability trade-offs
 - [ ] Add success/failure detection
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Ubuntu 22.04 with ROS2 Humble
-- Gazebo Fortress
-- Python 3.10+
-- CUDA-capable GPU (for YOLO)
-
-### Installation
-```bash
-# Clone repository
-cd ~/ros2_ws/src
-git clone <repository-url>
-
-# Install dependencies
-sudo apt update
-sudo apt install ros-humble-moveit ros-humble-gazebo-ros-pkgs
-
-# Build workspace
-cd ~/ros2_ws
-colcon build --symlink-install
-source install/setup.bash
-```
-
-### Running the System
-```bash
-# Terminal 1: Launch Gazebo + MoveIt
-ros2 launch panda_moveit_config moveit_gazebo_obb.py
-
-# Terminal 2: Start YOLO detection
-ros2 run yolov8_obb yolov8_obb_publisher.py
-
-# Terminal 3: Run arm controller (if not auto-started)
-ros2 run panda_moveit_config arm_control_from_UI.py
-
-# Terminal 4: Launch UI
-cd ~/ros2_ws/UI
-python3 bolt_selector.py
-```
-
-## 🔧 Troubleshooting
-
-### MoveIt Import Error
-```bash
-# Try building from source
-cd ~/ros2_ws/src
-git clone https://github.com/ros-planning/moveit2.git -b humble
-cd ~/ros2_ws
-colcon build --packages-select moveit_core moveit_ros_planning_interface
-```
-
-### Arm Not Moving
-1. Check if all nodes are running: `ros2 node list`
-2. Monitor topic: `ros2 topic echo /target_point`
-3. Check controller status: `ros2 control list_controllers`
-
-### UI Connection Issues
-- Ensure ROS_DOMAIN_ID is consistent across machines
-- For remote UI, configure DDS for network communication
-
-## 📚 Resources
-
-- [MoveIt2 Documentation](https://moveit.ros.org/)
-- [Gazebo Fortress Tutorials](https://gazebosim.org/docs/fortress/tutorials)
-- [YOLOv8 Documentation](https://docs.ultralytics.com/)
-- [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
-
-## 👥 Contributors
-
-- Annie Rudu - Project development
-
-## 📄 License
-
-This project is licensed under the MIT License - see LICENSE file for details.
