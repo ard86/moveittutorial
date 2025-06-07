@@ -2,7 +2,14 @@
 
 ## 🎯 Project Overview
 
-Making a robot arm insert a phone charger into an outlet.
+Making a robot arm insert a phone charger into an outlet with the following steps:
+    1. Detect charger and outlet
+    2. Grasp charger at optimal point
+    3. Orient for insertion (USB-C bidirectional)
+    4. Align with visual servoing
+    5. Insert with force control
+    6. Verify connection
+    7. Release and retract
 
 ## ✅ Current Progress
 
@@ -70,7 +77,6 @@ Making a robot arm insert a phone charger into an outlet.
   - [ ] Add force feedback (simulated initially)
 
 - [ ] **Task Sequencing**
-  - [ ] State machine for complete task:
     1. Detect charger and outlet
     2. Grasp charger at optimal point
     3. Orient for insertion (USB-C bidirectional)
