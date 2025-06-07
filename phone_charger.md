@@ -2,39 +2,13 @@
 
 ## 🎯 Project Overview
 
-This project adapts an existing bolt pick-and-place system to handle the precision task of inserting a phone charger into an outlet/USB port using a Panda robot arm in Gazebo simulation.
-
-## 📁 Project Structure
-
-```
-moveit2_obb/
-├── src/
-│   ├── panda_moveit_config/
-│   │   ├── config/            # Robot configuration files
-│   │   ├── launch/            # Launch files
-│   │   │   └── moveit_gazebo_obb.py
-│   │   ├── scripts/
-│   │   │   └── arm_control_from_UI.py
-│   │   └── worlds/            # Gazebo world files
-│   ├── robot_description/     # URDF and mesh files
-│   ├── yolov8_obb/           # YOLO detection package
-│   │   └── scripts/
-│   │       ├── best.pt       # Trained model
-│   │       ├── yolov8_obb_publisher.py
-│   │       └── yolov8_obb_subscriber.py
-│   └── yolov8_obb_msgs/      # Custom message definitions
-└── UI/
-    ├── bolt_selector.py      # Main UI application
-    ├── bolt_selector_window.py
-    └── bolt_selector_window.ui
-```
+Making a robot arm insert a phone charger into an outlet.
 
 ## ✅ Current Progress
 
-### Infrastructure Setup
+### ✅ Infrastructure Setup
 - [x] ROS2 Humble workspace configured on Ubuntu VM
 - [x] Gazebo simulation environment with Panda robot arm
-- [x] VS Code remote development setup for MacBook → VM workflow
 - [x] Robot controllers (arm + gripper) successfully spawned
 - [x] Camera feed bridged from Gazebo to ROS2 topics
 
