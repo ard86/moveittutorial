@@ -19,14 +19,14 @@ Making a robot arm insert a phone charger into an outlet with the following step
 - [x] Robot controllers (arm + gripper) successfully spawned
 - [x] Camera feed bridged from Gazebo to ROS2 topics
 
-### ✅ Computer Vision Pipeline
+### ✅ MoveIt servo
 - [x] YOLOv8 object detection integrated and functional
 - [x] PyQt5 UI application displaying:
   - Real-time camera feed from Gazebo
   - Bounding boxes for detected objects
   - Mouse interaction for object selection
 
-### ✅ Communication System
+### ✅ Communication
 - [x] ROS2 topics properly configured:
   - Camera detection for `/image_raw`
   - able to correctly identify `/target_point` for selected object coordinates
@@ -37,7 +37,7 @@ Making a robot arm insert a phone charger into an outlet with the following step
 
 ## 🚧 Current Issues
 
-### Critical Blockers
+### Super stuck
 1. **MoveIt Python Dependencies**
    - `ModuleNotFoundError: No module named 'moveit'`
    - Pre-built `ros-humble-moveit-py` package not available
