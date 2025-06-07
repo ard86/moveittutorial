@@ -50,11 +50,9 @@ Making a robot arm insert a phone charger into an outlet.
 - [ ] **3D Models**
   - [ ] Define collision and inertial properties
 
-- [ ] **Computer Vision**
+- [ ] **Retrain**
   - [ ] Retrain YOLOv8 for:
     - Phone chargers (body + cable)
-    - USB-C/Lightning connectors
-    - Outlet/port detection
   - [ ] Add keypoint detection for connector orientation
 
 - [ ] **Grasping Strategy**
