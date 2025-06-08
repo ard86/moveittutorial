@@ -1,0 +1,20 @@
+``
+cat ~/.ssh/id_ed25519.pub
+``
+print in vm: 
+``
+mkdir -p ~/.ssh
+nano ~/.ssh/authorized_keys
+``
+
+ssh -i ~/.ssh/id_ed25519 -p [[46552]] user@[[216.144.178.146]]
+
+``
+nano ~/.ssh/config
+``
+
+Host mythirsvm
+    HostName [[216.144.178.146]]
+    Port [[46552]]
+    User user
+    IdentityFile ~/.ssh/id_ed25519
